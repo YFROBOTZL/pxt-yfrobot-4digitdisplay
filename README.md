@@ -1,20 +1,18 @@
-# Four Digit Display (TM1650)
-makecode Four Digit Display (TM1650) Package for microbit  
+# Four Digit Display
+YFROBOT's Four Digit Display makecode Package for microbit .
 
-Four Digit Display is a Module with four 7-segment LED, it can show number. It has TM1650 chip inside, control with a I2C bus.  
+Four Digit Display is a Module with four 8-segment LED, it can show number.
 
-Author: shaoziyang  
-Date:   2018.Mar  
+Author: YFROBOT  
+Date:   2021-4-17
 
 ![](https://raw.githubusercontent.com/finalvalue/pxt-yfrobot-4digitdisplay/main/icon.png)
 
 ## Usage
 
-open your microbit makecode project, in Add Package, paste  
-
-https://github.com/finalvalue/pxt-yfrobot-4digitdisplay  
-
-to search box then search.
+* open your microbit makecode project, in Add Package;
+* paste https://github.com/finalvalue/pxt-yfrobot-4digitdisplay  
+* to search box then search.
 
 ![](https://raw.githubusercontent.com/finalvalue/pxt-yfrobot-4digitdisplay/main/4-LED.jpg)
 
