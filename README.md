@@ -8,11 +8,14 @@ Date:   2021-4-17
 
 ![](https://raw.githubusercontent.com/finalvalue/pxt-yfrobot-4digitdisplay/main/icon.png)
 
-## Usage
+## Use as Extension
 
-* open your microbit makecode project, in Add Package;
-* paste https://github.com/finalvalue/pxt-yfrobot-4digitdisplay  
-* to search box then search.
+This repository can be added as an **extension** in MakeCode.
+
+* open [https://makecode.microbit.org](https://makecode.microbit.org)
+* click on **New Project**
+* click on **Extensions** under the gearwheel menu
+* search for **https://github.com/finalvalue/pxt-yfrobot-4digitdisplay** and import
 
 ![](https://raw.githubusercontent.com/finalvalue/pxt-yfrobot-4digitdisplay/main/4-LED.jpg)
 
@@ -49,14 +52,9 @@ set display intensity.
 ![](https://raw.githubusercontent.com/finalvalue/pxt-yfrobot-4digitdisplay/main/demo.jpg)
 
 ## License  
-
 MIT
-
-Copyright (c) 2018, microbit/micropython Chinese community  
 
 ## Supported targets  
 
 * for PXT/microbit
-
-
 [From microbit/micropython Chinese community](http://www.micropython.org.cn) 
