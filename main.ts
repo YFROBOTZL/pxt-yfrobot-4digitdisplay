@@ -10,7 +10,7 @@
  * @date  2021-04-17
 */
 
-//% weight=100 color=#64C800 icon="8" block="DightalTubes"
+//% weight=100 color=#64C800 icon="\uf12e" block="DightalTubes"
 namespace DightalTubes {
 
     let COMMAND_I2C_ADDRESS = 0x24
