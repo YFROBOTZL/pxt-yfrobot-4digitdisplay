@@ -139,7 +139,7 @@ namespace DightalTubes {
      */
     function cmd(c: number) {
         // pins.i2cWriteNumber(COMMAND_I2C_ADDRESS, c, NumberFormat.Int8BE)
-        writeByte(COMMAND_I2C_ADDRESS, c);
+        writeByte(CMD_SYSTEM_CONFIG, c);
     }
 
     /**
@@ -148,7 +148,7 @@ namespace DightalTubes {
      */
     function dat(bit: number, d: number) {
         // pins.i2cWriteNumber(DISPLAY_I2C_ADDRESS + (bit % 4), d, NumberFormat.Int8BE)
-        writeByte(DISPLAY_I2C_ADDRESS + (bit % 4), d);
+        writeByte(CMD_SYSTEM_CONFIG + (bit % 4), d);
     }
 
     /**
