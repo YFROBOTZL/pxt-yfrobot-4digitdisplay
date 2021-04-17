@@ -16,6 +16,8 @@ namespace DightalTubes {
     let COMMAND_I2C_ADDRESS = 0x24
     let DISPLAY_I2C_ADDRESS = 0x34
 
+    let PINCLK = DigitalPin.P1;
+    let PINDIO = DigitalPin.P2;
 
     let DISPLAY_ON = 0X01
     let DISPLAY_OFF = 0X00
@@ -52,10 +54,8 @@ namespace DightalTubes {
     //% pin_d.fieldEditor="gridpicker" pin_d.fieldOptions.columns=4 pin_d.fieldOptions.tooltips="false"
     //% weight=15
     export function connectIrReceiver(pin_c: DigitalPin, pin_d: DigitalPin): void {
-        
-        let PINCLK = pin_c;
-        let PINDIO = pin_d;
-        
+        PINCLK = pin_c;
+        PINDIO = pin_d;
     }
 
     /** FrameStart_1650 
