@@ -16,6 +16,8 @@ namespace DightalTubes {
     let COMMAND_I2C_ADDRESS = 0x24
     let DISPLAY_I2C_ADDRESS = 0x34
 
+    let CMD_SYSTEM_CONFIG = 0x48   
+
     let PINCLK = DigitalPin.P1;
     let PINDIO = DigitalPin.P2;
 
@@ -53,37 +55,82 @@ namespace DightalTubes {
     //% pin_c.fieldEditor="gridpicker" pin_c.fieldOptions.columns=4 pin_c.fieldOptions.tooltips="false"
     //% pin_d.fieldEditor="gridpicker" pin_d.fieldOptions.columns=4 pin_d.fieldOptions.tooltips="false"
     //% weight=15
-    export function connectIrReceiver(pin_c: DigitalPin, pin_d: DigitalPin): void {
+    export function connectPIN(pin_c: DigitalPin, pin_d: DigitalPin): void {
         PINCLK = pin_c;
         PINDIO = pin_d;
     }
 
     /** FrameStart_1650 
      */
-    function FrameStart_1650(void) {
-        digitalWrite(_pin_DIO , HIGH);
-        digitalWrite(_pin_SCK , HIGH);		  
-        digitalWrite(_pin_DIO , LOW);
+    function FrameStart_1650(): void {
+        pins.digitalWritePin(PINDIO, 1);
+        pins.digitalWritePin(PINCLK, 1);
+        pins.digitalWritePin(PINDIO, 0);
     }
 
     /** FrameEnd_1650 
      */
-    function FrameEnd_1650(void) {
-        digitalWrite(_pin_DIO , LOW);
-        digitalWrite(_pin_SCK , HIGH);		  
-        digitalWrite(_pin_DIO , HIGH);
+    function FrameEnd_1650(): void {
+        pins.digitalWritePin(PINDIO, 0);
+        pins.digitalWritePin(PINCLK, 1);
+        pins.digitalWritePin(PINDIO, 1);
     }
 
     /** FrameAck_1650 
      */
-    function FrameAck_1650(void) {
-        if(digitalRead(_pin_DIO) == LOW) {
-            digitalWrite(_pin_SCK , HIGH);	
-            digitalWrite(_pin_SCK , LOW);	
+    function FrameAck_1650(): number {
+        if(pins.digitalReadPin(PINDIO) == 0) {
+            pins.digitalWritePin(PINCLK , 1);	
+            pins.digitalWritePin(PINCLK , 0);	
             return 0;
         } else {
             return 1;
         }
+    }
+
+    /** writeByte 
+     */
+    function writeByte(firstByte: number, secondByte: number): number {
+        let tmp=0;
+        let i=0;
+        let err=0;		
+        tmp=firstByte;
+
+        FrameStart_1650();
+        for(i=0;i<8;i++) {
+            if(tmp&0x80) {
+                pins.digitalWritePin(PINDIO, 1);
+            } else {
+                pins.digitalWritePin(PINDIO, 0);
+            }
+            pins.digitalWritePin(PINCLK , 0);
+            pins.digitalWritePin(PINCLK , 1);
+            pins.digitalWritePin(PINCLK , 0);
+            
+            tmp=tmp<<1;
+        }
+        if(FrameAck_1650() == 1) {
+            err=1;
+        }
+        tmp=secondByte;
+        for(i=0;i<8;i++) {
+            if(tmp&0x80) {
+                pins.digitalWritePin(PINDIO, 1);
+            } else {
+                pins.digitalWritePin(PINDIO, 0);
+            }
+        
+            pins.digitalWritePin(PINCLK , 0);
+            pins.digitalWritePin(PINCLK , 1);
+            pins.digitalWritePin(PINCLK , 0);
+            
+            tmp=tmp<<1;
+        }
+        if(FrameAck_1650()==1) {
+            err=1;
+        }
+        FrameEnd_1650();
+        return err;
     }
 
     /**
@@ -91,7 +138,8 @@ namespace DightalTubes {
      * @param is command, eg: 0
      */
     function cmd(c: number) {
-        pins.i2cWriteNumber(COMMAND_I2C_ADDRESS, c, NumberFormat.Int8BE)
+        // pins.i2cWriteNumber(COMMAND_I2C_ADDRESS, c, NumberFormat.Int8BE)
+        writeByte(COMMAND_I2C_ADDRESS, c);
     }
 
     /**
@@ -99,7 +147,8 @@ namespace DightalTubes {
      * @param is data, eg: 0
      */
     function dat(bit: number, d: number) {
-        pins.i2cWriteNumber(DISPLAY_I2C_ADDRESS + (bit % 4), d, NumberFormat.Int8BE)
+        // pins.i2cWriteNumber(DISPLAY_I2C_ADDRESS + (bit % 4), d, NumberFormat.Int8BE)
+        writeByte(DISPLAY_I2C_ADDRESS + (bit % 4), d);
     }
 
     /**
