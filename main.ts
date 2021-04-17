@@ -1,14 +1,17 @@
-/**
- * makecode Four Digit Display (TM1650) Package.
- * From microbit/micropython Chinese community.
- * http://www.micropython.org.cn
- */
+/** 
+ * @file pxt-yfrobot-4digitdisplay
+ * @brief YFROBOT's Four Digit Display makecode Package.
+ * @n This is a MakeCode graphical programming education robot.
+ * 
+ * @copyright    YFROBOT[www.yfrobot.com],2020
+ * @copyright    MIT Lesser General Public License
+ * 
+ * @author [email](yfrobot@qq.com)
+ * @date  2021-04-17
+*/
 
-/**
- * TM1650 digit Display
- */
-//% weight=100 color=#64C800 icon="8" block="TM1650"
-namespace TM1650 {
+//% weight=100 color=#64C800 icon="8" block="DightalTubes"
+namespace DightalTubes {
 
     let COMMAND_I2C_ADDRESS = 0x24
     let DISPLAY_I2C_ADDRESS = 0x34
