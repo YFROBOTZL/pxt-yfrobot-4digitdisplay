@@ -29,6 +29,9 @@ namespace DightalTubes {
     let DIG3_ADDRESS = 0x6C
     let DIG4_ADDRESS = 0x6E
 
+    let DatAddressArray = [DIG1_ADDRESS, DIG2_ADDRESS, DIG3_ADDRESS, DIG4_ADDRESS];
+
+
     // let _SEG = [0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71];
     let _SEG = [
         //0x00  0x01  0x02  0x03  0x04  0x05  0x06  0x07  0x08  0x09  0x0A  0x0B  0x0C  0x0D  0x0E  0x0F
@@ -148,7 +151,7 @@ namespace DightalTubes {
      */
     function dat(bit: number, d: number) {
         // pins.i2cWriteNumber(DISPLAY_I2C_ADDRESS + (bit % 4), d, NumberFormat.Int8BE)
-        writeByte(CMD_SYSTEM_CONFIG + (bit % 4), d);
+        writeByte(DatAddressArray[bit % 4], d);
     }
 
     /**
