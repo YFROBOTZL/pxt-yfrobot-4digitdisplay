@@ -66,10 +66,6 @@ _main___P1_locals:
     bl basic::forever
     add sp, #4*1 ; pop locals 1
     @stackempty locals
-    movs r0, #145
-    ldr r7, [r6, #0]
-    str r0, [r7, #40]
-    @stackempty locals
     movs r0, #203
     ldr r7, [r6, #0]
     str r0, [r7, #48]
@@ -77,6 +73,10 @@ _main___P1_locals:
     movs r0, #205
     ldr r7, [r6, #0]
     str r0, [r7, #44]
+    @stackempty locals
+    movs r0, #145
+    ldr r7, [r6, #0]
+    str r0, [r7, #40]
     @stackempty locals
     movs r0, #209
     ldr r7, [r6, #0]
@@ -826,7 +826,7 @@ _jmpwords_3:
     ldr r7, [r6, #0]
     str r0, [r7, #52]
     @stackempty locals
-    bl DightalTubes_on__P867
+    bl DightalTubes_on__P905
 _proccall1:
     @stackempty locals
 .ret.1:
@@ -887,19 +887,19 @@ inline__P684_end:
     @stackempty args
 ; endfun
     ;
-; Function on main.ts:162
+; Function on main.ts:205
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_on__P867:
-DightalTubes_on__P867_nochk:
+DightalTubes_on__P905:
+DightalTubes_on__P905_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_on__P867_locals:
+DightalTubes_on__P905_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #36]
     push {r0} ; proc-arg
@@ -911,59 +911,59 @@ DightalTubes_on__P867_locals:
     movs r1, #3
     bl _numops_adds
     push {r0} ; the one arg
-    bl DightalTubes_cmd__P865
+    bl DightalTubes_cmd__P903
 _proccall3:
     add sp, #4*1 ; pop locals 1
     @stackempty locals
-.ret.867:
+.ret.905:
     @stackempty locals
     movs r0, #0
 .final_0_3:
-DightalTubes_on__P867_end:
+DightalTubes_on__P905_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function cmd main.ts:143
+; Function cmd main.ts:186
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_cmd__P865:
-DightalTubes_cmd__P865_nochk:
+DightalTubes_cmd__P903:
+DightalTubes_cmd__P903_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_cmd__P865_locals:
+DightalTubes_cmd__P903_locals:
     ldr r0, [sp, args@0]
     push {r0} ; proc-arg
     ldr r7, [r6, #0]
     ldr r0, [r7, #40]
     push {r0} ; proc-arg
-    bl DightalTubes_writeByte__P864
+    bl DightalTubes_writeByte__P901
 _proccall4:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
-.ret.865:
+.ret.903:
     @stackempty locals
     movs r0, #0
 .final_0_4:
-DightalTubes_cmd__P865_end:
+DightalTubes_cmd__P903_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function writeByte main.ts:96
+; Function writeByte main.ts:124
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_writeByte__P864:
-DightalTubes_writeByte__P864_nochk:
+DightalTubes_writeByte__P901:
+DightalTubes_writeByte__P901_nochk:
     @stackmark func
     @stackmark args
     push {lr}
@@ -973,7 +973,7 @@ DightalTubes_writeByte__P864_nochk:
     push {r0} ;loc
     push {r0} ;loc
     @stackmark locals
-DightalTubes_writeByte__P864_locals:
+DightalTubes_writeByte__P901_locals:
     movs r0, #1
     str r0, [sp, locals@0]
     @stackempty locals
@@ -986,17 +986,17 @@ DightalTubes_writeByte__P864_locals:
     ldr r0, [sp, args@0]
     str r0, [sp, locals@0]
     @stackempty locals
-    bl DightalTubes_FrameStart_1650__P861
+    bl DightalTubes_FrameStart_1650__P898
 _proccall5:
     @stackempty locals
     movs r0, #1
     str r0, [sp, locals@1]
     @stackempty locals
-.fortop.893:
+.fortop.931:
     ldr r0, [sp, locals@1]
     movs r1, #17
     bl _cmp_lt
-    beq .brk.893      
+    beq .brk.931      
 .jmpz6:
     ldr r0, [sp, locals@0]
     movs r1, #1
@@ -1069,15 +1069,15 @@ _proccall5:
     add sp, #4*1 ; pop locals 1
     str r0, [sp, locals@0]
     @stackempty locals
-.cont.893:
+.cont.931:
     ldr r0, [sp, locals@1]
     movs r1, #3
     bl _numops_adds
     str r0, [sp, locals@1]
     @stackempty locals
-    b .fortop.893      
-.brk.893:
-    bl DightalTubes_FrameAck_1650__P863
+    b .fortop.931      
+.brk.931:
+    bl DightalTubes_FrameAck_1650__P900
 _proccall9:
     movs r1, #3
     bl _cmp_eq
@@ -1094,11 +1094,11 @@ _proccall9:
     movs r0, #1
     str r0, [sp, locals@1]
     @stackempty locals
-.fortop.922:
+.fortop.960:
     ldr r0, [sp, locals@1]
     movs r1, #17
     bl _cmp_lt
-    beq .brk.922      
+    beq .brk.960      
 .jmpz10:
     ldr r0, [sp, locals@0]
     movs r1, #1
@@ -1171,15 +1171,15 @@ _proccall9:
     add sp, #4*1 ; pop locals 1
     str r0, [sp, locals@0]
     @stackempty locals
-.cont.922:
+.cont.960:
     ldr r0, [sp, locals@1]
     movs r1, #3
     bl _numops_adds
     str r0, [sp, locals@1]
     @stackempty locals
-    b .fortop.922      
-.brk.922:
-    bl DightalTubes_FrameAck_1650__P863
+    b .fortop.960      
+.brk.960:
+    bl DightalTubes_FrameAck_1650__P900
 _proccall13:
     movs r1, #3
     bl _cmp_eq
@@ -1190,33 +1190,33 @@ _proccall13:
     @stackempty locals
 .else_6_5:
 .afterif_7_5:
-    bl DightalTubes_FrameEnd_1650__P862
+    bl DightalTubes_FrameEnd_1650__P899
 _proccall14:
     @stackempty locals
     ldr r0, [sp, locals@2]
-.ret.864:
+.ret.901:
     @stackempty locals
 .final_8_5:
     add sp, #4*3 ; pop locals 3
-DightalTubes_writeByte__P864_end:
+DightalTubes_writeByte__P901_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function FrameEnd_1650 main.ts:76
+; Function FrameEnd_1650 main.ts:104
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_FrameEnd_1650__P862:
-DightalTubes_FrameEnd_1650__P862_nochk:
+DightalTubes_FrameEnd_1650__P899:
+DightalTubes_FrameEnd_1650__P899_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_FrameEnd_1650__P862_locals:
+DightalTubes_FrameEnd_1650__P899_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1247,29 +1247,29 @@ DightalTubes_FrameEnd_1650__P862_locals:
     bl pins::digitalWritePin
     add sp, #4*1 ; pop locals 1
     @stackempty locals
-.ret.862:
+.ret.899:
     @stackempty locals
     movs r0, #0
 .final_0_6:
-DightalTubes_FrameEnd_1650__P862_end:
+DightalTubes_FrameEnd_1650__P899_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function FrameAck_1650 main.ts:84
+; Function FrameAck_1650 main.ts:112
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_FrameAck_1650__P863:
-DightalTubes_FrameAck_1650__P863_nochk:
+DightalTubes_FrameAck_1650__P900:
+DightalTubes_FrameAck_1650__P900_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_FrameAck_1650__P863_locals:
+DightalTubes_FrameAck_1650__P900_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1304,35 +1304,35 @@ DightalTubes_FrameAck_1650__P863_locals:
     add sp, #4*1 ; pop locals 1
     @stackempty locals
     movs r0, #1
-    b .ret.863      
+    b .ret.900      
     b .afterif_1_7      
 .else_0_7:
     movs r0, #3
-    b .ret.863      
+    b .ret.900      
 .afterif_1_7:
     movs r0, #0
-.ret.863:
+.ret.900:
     @stackempty locals
 .final_2_7:
-DightalTubes_FrameAck_1650__P863_end:
+DightalTubes_FrameAck_1650__P900_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function FrameStart_1650 main.ts:68
+; Function FrameStart_1650 main.ts:96
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_FrameStart_1650__P861:
-DightalTubes_FrameStart_1650__P861_nochk:
+DightalTubes_FrameStart_1650__P898:
+DightalTubes_FrameStart_1650__P898_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_FrameStart_1650__P861_locals:
+DightalTubes_FrameStart_1650__P898_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1363,17 +1363,17 @@ DightalTubes_FrameStart_1650__P861_locals:
     bl pins::digitalWritePin
     add sp, #4*1 ; pop locals 1
     @stackempty locals
-.ret.861:
+.ret.898:
     @stackempty locals
     movs r0, #0
 .final_0_8:
-DightalTubes_FrameStart_1650__P861_end:
+DightalTubes_FrameStart_1650__P898_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function showNumber main.ts:208
+; Function showNumber main.ts:251
     ;
     .section code
     .balign 4
@@ -1395,7 +1395,7 @@ DightalTubes_showNumber__P686_locals:
     push {r0} ; proc-arg
     movs r0, #1
     push {r0} ; proc-arg
-    bl DightalTubes_dat__P866
+    bl DightalTubes_dat__P904
 _proccall17:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
@@ -1426,7 +1426,7 @@ _proccall17:
     movs r0, #1
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P870
+    bl DightalTubes_digit__P908
 _proccall18:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
@@ -1442,7 +1442,7 @@ _proccall18:
     movs r0, #7
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P870
+    bl DightalTubes_digit__P908
 _proccall19:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
@@ -1465,7 +1465,7 @@ _proccall19:
     movs r0, #5
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P870
+    bl DightalTubes_digit__P908
 _proccall20:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
@@ -1488,7 +1488,7 @@ _proccall20:
     movs r0, #3
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P870
+    bl DightalTubes_digit__P908
 _proccall21:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
@@ -1502,19 +1502,19 @@ DightalTubes_showNumber__P686_end:
     @stackempty args
 ; endfun
     ;
-; Function digit main.ts:197
+; Function digit main.ts:240
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_digit__P870:
-DightalTubes_digit__P870_nochk:
+DightalTubes_digit__P908:
+DightalTubes_digit__P908_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_digit__P870_locals:
+DightalTubes_digit__P908_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #52]
     push {r0} ; proc-arg
@@ -1569,33 +1569,33 @@ DightalTubes_digit__P870_locals:
     pop {r1, r2}
     push {r1}
     push {r2}
-    bl DightalTubes_dat__P866
+    bl DightalTubes_dat__P904
 _proccall22:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
-.ret.870:
+.ret.908:
     @stackempty locals
     movs r0, #0
 .final_0_10:
-DightalTubes_digit__P870_end:
+DightalTubes_digit__P908_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function dat main.ts:152
+; Function dat main.ts:195
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_dat__P866:
-DightalTubes_dat__P866_nochk:
+DightalTubes_dat__P904:
+DightalTubes_dat__P904_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_dat__P866_locals:
+DightalTubes_dat__P904_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #16]
     push {r0} ; proc-arg
@@ -1615,15 +1615,15 @@ DightalTubes_dat__P866_locals:
     ldr r0, [sp, args@1]
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_writeByte__P864
+    bl DightalTubes_writeByte__P901
 _proccall23:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
-.ret.866:
+.ret.904:
     @stackempty locals
     movs r0, #0
 .final_0_11:
-DightalTubes_dat__P866_end:
+DightalTubes_dat__P904_end:
     pop {pc}
     @stackempty func
     @stackempty args
