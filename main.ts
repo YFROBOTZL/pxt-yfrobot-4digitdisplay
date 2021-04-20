@@ -15,22 +15,33 @@ namespace DightalTubes {
 
     let COMMAND_I2C_ADDRESS = 0x24
     let DISPLAY_I2C_ADDRESS = 0x34
-
-    let CMD_SYSTEM_CONFIG = 0x48   
-
+    
     let PINCLK = DigitalPin.P1;
     let PINDIO = DigitalPin.P2;
 
-    let DISPLAY_ON = 0X01
-    let DISPLAY_OFF = 0X00
+    let _8_SEGMENT_MODE = 0x00	  // 8段显示模式
+    let _7_SEGMENT_MODE = 0x08	  // 7段显示模式
+
+    let NORMAL_MODE = 0x00	  // 正常工作模式
+    let STANDBY_MODE = 0x04	  // 待机工作模式
+
+    let DISPLAY_ON = 0x01	   
+    let DISPLAY_OFF = 0x00	
+
+    let CMD_SYSTEM_CONFIG = 0x48   
+
 
     let DIG1_ADDRESS = 0x68
     let DIG2_ADDRESS = 0x6A
     let DIG3_ADDRESS = 0x6C
     let DIG4_ADDRESS = 0x6E
 
-    let DatAddressArray = [DIG1_ADDRESS, DIG2_ADDRESS, DIG3_ADDRESS, DIG4_ADDRESS];
+    let TM1650_NUM_DIGITS = 16 // max number of digits  最大数字位数
+    let TM1650_MAX_STRING = 128 // number of digits 位数
 
+    let Brightness = [0x10, 0x20, 0x30, 0x40, 0x50, 0x60, 0x70, 0x00];
+    let DatAddressArray = [DIG1_ADDRESS, DIG2_ADDRESS, DIG3_ADDRESS, DIG4_ADDRESS];
+    let iNumDigits = 4;
 
     // let _SEG = [0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71];
     let _SEG = [
@@ -48,6 +59,13 @@ namespace DightalTubes {
     let _intensity = 8
     let dbuf = [0, 0, 0, 0]
 
+    let iString
+	let iBuffer_num   // 数字位
+	let iBuffer_dot	// 小数点位
+	let SegmentMode
+	let WorkMode
+	let DsplayONOFF
+
     /**
      * Connects to the digital tube module at the specified pin.
      * @param pin_c CLK pin. eg: DigitalPin.P1
@@ -61,6 +79,17 @@ namespace DightalTubes {
     export function connectPIN(pin_c: DigitalPin, pin_d: DigitalPin): void {
         PINCLK = pin_c;
         PINDIO = pin_d;
+        // iPosition = NULL;
+        for (let i=0; i<iNumDigits; i++) {
+            // iCtrl[i] = 0;
+            iBuffer_num[i] = 0;
+            iBuffer_dot[i] = 0;
+        }
+        SegmentMode = _8_SEGMENT_MODE;
+        WorkMode = NORMAL_MODE;
+        DsplayONOFF = DISPLAY_ON;
+        clear();
+        displayOn();
     }
 
     /** FrameStart_1650 
@@ -133,6 +162,19 @@ namespace DightalTubes {
             err=1;
         }
         FrameEnd_1650();
+        return err;
+    }
+
+
+    /** display 
+     * @param digi data, eg: 1
+     * @param cha data, eg: 4
+     */
+    function displayOneDigi(digi: number, cha:number): number
+    {
+        let tmp = 0;
+        let err = 0;
+        err = writeByte(DatAddressArray[digi-1],cha);
         return err;
     }
 
