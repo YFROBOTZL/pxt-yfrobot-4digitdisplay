@@ -4,7 +4,8 @@
     "description": "YFROBOT's Four Digit Display makecode Package for micro:bit",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "microphone": "*"
     },
     "files": [
         "README.md",
