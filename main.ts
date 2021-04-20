@@ -60,8 +60,8 @@ namespace DightalTubes {
     let dbuf = [0, 0, 0, 0]
 
     let iString
-	let iBuffer_num   // 数字位
-	let iBuffer_dot	// 小数点位
+	let iBuffer_num =[0x10, 0x20, 0x30, 0x40]  // 数字位
+	let iBuffer_dot	=[0x10, 0x20, 0x30, 0x40] // 小数点位
 	let SegmentMode
 	let WorkMode
 	let DsplayONOFF
@@ -89,7 +89,6 @@ namespace DightalTubes {
         WorkMode = NORMAL_MODE;
         DsplayONOFF = DISPLAY_ON;
         clear();
-        displayOn();
     }
 
     /** FrameStart_1650 
