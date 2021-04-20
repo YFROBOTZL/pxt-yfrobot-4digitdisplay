@@ -170,7 +170,9 @@ namespace DightalTubes {
      * @param digi data, eg: 1
      * @param cha data, eg: 4
      */
-    function displayOneDigi(digi: number, cha:number): number
+    //% blockId="TM650_DOD" block="display N %digi| C %cha"
+    //% weight=50 blockGap=8
+    export function displayOneDigi(digi: number, cha:number): number
     {
         let tmp = 0;
         let err = 0;
