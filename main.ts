@@ -179,6 +179,24 @@ namespace DightalTubes {
         return err;
     }
 
+    /** display 
+     * @param cha data, eg: 4
+     */
+    //% blockId="TM650_DOD" block="display C %cha"
+    //% weight=52 blockGap=8
+    export function displayString(cha:number): void
+    {
+        for (let i=0; i<iNumDigits; i++) {
+            let a = (cha) & 0b01111111;
+            iBuffer_num[i] = _SEG[a];
+            // iBuffer_num[i] = pgm_read_byte_near(TM1650_CDigits + a);
+            if (a) {
+                writeByte(DatAddressArray[i],iBuffer_num[i] | iBuffer_dot[i]);
+            }
+            else    break;
+          }
+    }
+
     /**
      * send command to display
      * @param is command, eg: 0
