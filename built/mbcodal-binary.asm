@@ -1,10 +1,10 @@
 ; Interface tables: 0/0 (NaN%)
 ; Virtual methods: 0 / 0
-; generated code sizes (bytes): 5156 (incl. 4420 user, 688 helpers, 12 vtables, 36 lits); src size 0
-; assembly: 3499 lines; density: 57.4 bytes/stmt; (77 stmts)
-; total bytes: 285732 (218.0% of 128.0k flash with -154660 free)
-; peep hole pass: 45 instructions removed and 54 updated
-; peep hole pass: 15 instructions removed and 0 updated
+; generated code sizes (bytes): 4552 (incl. 3816 user, 688 helpers, 12 vtables, 36 lits); src size 0
+; assembly: 3378 lines; density: 33.77 bytes/stmt; (113 stmts)
+; total bytes: 285128 (217.5% of 128.0k flash with -154056 free)
+; peep hole pass: 65 instructions removed and 72 updated
+; peep hole pass: 23 instructions removed and 0 updated
 ; peep hole pass: 0 instructions removed and 0 updated
 
 
@@ -54,9 +54,13 @@ _main___P1_locals:
     ldr r7, [r6, #0]
     str r0, [r7, #12]
     @stackempty locals
-    movs r0, #1
-    ldr r7, [r6, #0]
-    str r0, [r7, #12]
+    movs r0, #205
+    push {r0} ; proc-arg
+    movs r0, #203
+    push {r0} ; proc-arg
+    bl DightalTubes_connectPIN__P682
+_proccall1:
+    add sp, #4*2 ; pop locals 2
     @stackempty locals
     ldr r0, _ldlit_2      
     push {r0} ; proc-arg
@@ -143,250 +147,6 @@ _main___P1_locals:
     str r7, [r6, #4]
     bl Array_::mk
     push {r0}; tmpstore @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    lsls r1, r1, #8
-    adds r1, #5
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #67
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #5
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #115
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #31
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #129
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    lsls r1, r1, #8
-    adds r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
     movs r1, #127
     mov r7, sp
     str r7, [r6, #4]
@@ -437,46 +197,6 @@ _main___P1_locals:
     str r7, [r6, #4]
     bl Array_::push
     ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    b _jmpwords_3      
-.balign 4
-_ldlit_2:
- .word inline__P684_Lit
-_jmpwords_3:
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #145
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #167
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
     movs r1, #239
     mov r7, sp
     str r7, [r6, #4]
@@ -503,291 +223,6 @@ _jmpwords_3:
     bl Array_::push
     ldr r0, [sp, #4*0] ; tmpref @1
     movs r1, #227
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #223
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #237
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #13
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #61
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #113
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #169
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #127
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #231
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #207
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #161
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #219
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #241
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #125
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #221
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #115
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #31
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #17
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #199
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #191
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #249
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #177
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #189
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #247
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #227
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #223
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #233
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #5
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #61
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #13
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #169
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #185
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #231
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #207
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #161
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #219
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #241
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #57
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #221
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #115
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #97
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #31
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
-    mov r7, sp
-    str r7, [r6, #4]
-    bl Array_::push
-    ldr r0, [sp, #4*0] ; tmpref @1
-    movs r1, #1
     mov r7, sp
     str r7, [r6, #4]
     bl Array_::push
@@ -826,8 +261,8 @@ _jmpwords_3:
     ldr r7, [r6, #0]
     str r0, [r7, #52]
     @stackempty locals
-    bl DightalTubes_on__P906
-_proccall1:
+    bl DightalTubes_on__P768
+_proccall2:
     @stackempty locals
 .ret.1:
     @stackempty locals
@@ -843,26 +278,89 @@ _main___P1_end:
     ;
     .section code
     .balign 4
-inline__P684_Lit:
+inline__P689_Lit:
     .word pxt::RefAction_vtable
     .short 0, 0 ; no captured vars
-    .word inline__P684_args@fn
-inline__P684_args:
+    .word inline__P689_args@fn
+inline__P689_args:
     .section code
-inline__P684:
-inline__P684_nochk:
+inline__P689:
+inline__P689_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-inline__P684_locals:
+inline__P689_locals:
+    movs r0, #5
+    push {r0} ; proc-arg
+    bl DightalTubes_setIntensity__P691
+_proccall3:
+    add sp, #4*1 ; pop locals 1
+    @stackempty locals
+    bl DightalTubes_clear__P693
+_proccall4:
+    @stackempty locals
+    movs r0, #5
+    push {r0} ; proc-arg
+    movs r0, #7
+    push {r0} ; proc-arg
+    bl DightalTubes_digit__P695
+_proccall5:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    movs r0, #125
+    lsls r0, r0, #3
+    mov r7, sp
+    str r7, [r6, #4]
+    bl basic::pause
+    @stackempty locals
+    bl DightalTubes_clear__P693
+_proccall6:
+    @stackempty locals
     ldr r7, [r6, #0]
     ldr r0, [r7, #12]
     push {r0} ; proc-arg
-    bl DightalTubes_showNumber__P686
-_proccall2:
+    bl DightalTubes_showNumber__P700
+_proccall7:
     add sp, #4*1 ; pop locals 1
+    @stackempty locals
+    movs r0, #125
+    lsls r0, r0, #3
+    mov r7, sp
+    str r7, [r6, #4]
+    bl basic::pause
+    @stackempty locals
+    movs r0, #17
+    push {r0} ; proc-arg
+    bl DightalTubes_setIntensity__P691
+_proccall8:
+    add sp, #4*1 ; pop locals 1
+    @stackempty locals
+    bl DightalTubes_clear__P693
+_proccall9:
+    @stackempty locals
+    movs r0, #15
+    lsls r0, r0, #8
+    adds r0, #203
+    push {r0} ; proc-arg
+    bl DightalTubes_showHex__P707
+_proccall10:
+    add sp, #4*1 ; pop locals 1
+    @stackempty locals
+    movs r0, #125
+    lsls r0, r0, #3
+    mov r7, sp
+    str r7, [r6, #4]
+    bl basic::pause
+    @stackempty locals
+    movs r0, #66
+    push {r0} ; proc-arg
+    movs r0, #5
+    push {r0} ; proc-arg
+    bl DightalTubes_showDpAt__P711
+_proccall11:
+    add sp, #4*2 ; pop locals 2
     @stackempty locals
     ldr r7, [r6, #0]
     ldr r0, [r7, #12]
@@ -877,29 +375,29 @@ _proccall2:
     str r7, [r6, #4]
     bl basic::pause
     @stackempty locals
-.ret.684:
+.ret.689:
     @stackempty locals
     movs r0, #0
 .final_0_2:
-inline__P684_end:
+inline__P689_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function on main.ts:223
+; Function on main.ts:153
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_on__P906:
-DightalTubes_on__P906_nochk:
+DightalTubes_on__P768:
+DightalTubes_on__P768_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_on__P906_locals:
+DightalTubes_on__P768_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #36]
     push {r0} ; proc-arg
@@ -911,59 +409,59 @@ DightalTubes_on__P906_locals:
     movs r1, #3
     bl _numops_adds
     push {r0} ; the one arg
-    bl DightalTubes_cmd__P904
-_proccall3:
+    bl DightalTubes_cmd__P766
+_proccall12:
     add sp, #4*1 ; pop locals 1
     @stackempty locals
-.ret.906:
+.ret.768:
     @stackempty locals
     movs r0, #0
 .final_0_3:
-DightalTubes_on__P906_end:
+DightalTubes_on__P768_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function cmd main.ts:204
+; Function cmd main.ts:135
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_cmd__P904:
-DightalTubes_cmd__P904_nochk:
+DightalTubes_cmd__P766:
+DightalTubes_cmd__P766_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_cmd__P904_locals:
+DightalTubes_cmd__P766_locals:
     ldr r0, [sp, args@0]
     push {r0} ; proc-arg
     ldr r7, [r6, #0]
     ldr r0, [r7, #40]
     push {r0} ; proc-arg
-    bl DightalTubes_writeByte__P901
-_proccall4:
+    bl DightalTubes_writeByte__P765
+_proccall13:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
-.ret.904:
+.ret.766:
     @stackempty locals
     movs r0, #0
 .final_0_4:
-DightalTubes_cmd__P904_end:
+DightalTubes_cmd__P766_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function writeByte main.ts:124
+; Function writeByte main.ts:88
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_writeByte__P901:
-DightalTubes_writeByte__P901_nochk:
+DightalTubes_writeByte__P765:
+DightalTubes_writeByte__P765_nochk:
     @stackmark func
     @stackmark args
     push {lr}
@@ -973,7 +471,7 @@ DightalTubes_writeByte__P901_nochk:
     push {r0} ;loc
     push {r0} ;loc
     @stackmark locals
-DightalTubes_writeByte__P901_locals:
+DightalTubes_writeByte__P765_locals:
     movs r0, #1
     str r0, [sp, locals@0]
     @stackempty locals
@@ -986,18 +484,18 @@ DightalTubes_writeByte__P901_locals:
     ldr r0, [sp, args@0]
     str r0, [sp, locals@0]
     @stackempty locals
-    bl DightalTubes_FrameStart_1650__P898
-_proccall5:
+    bl DightalTubes_FrameStart_1650__P762
+_proccall14:
     @stackempty locals
     movs r0, #1
     str r0, [sp, locals@1]
     @stackempty locals
-.fortop.932:
+.fortop.789:
     ldr r0, [sp, locals@1]
     movs r1, #17
     bl _cmp_lt
-    beq .brk.932      
-.jmpz6:
+    beq .brk.789      
+.jmpz15:
     ldr r0, [sp, locals@0]
     movs r1, #1
     lsls r1, r1, #8
@@ -1008,7 +506,7 @@ _proccall5:
     bl numops::toBoolDecr
     cmp r0, #0
     beq .else_0_5      
-.jmpz7:
+.jmpz16:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1020,6 +518,9 @@ _proccall5:
     add sp, #4*1 ; pop locals 1
     @stackempty locals
     b .afterif_1_5      
+.balign 4
+_ldlit_2:
+ .word inline__P689_Lit
 .else_0_5:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
@@ -1069,20 +570,20 @@ _proccall5:
     add sp, #4*1 ; pop locals 1
     str r0, [sp, locals@0]
     @stackempty locals
-.cont.932:
+.cont.789:
     ldr r0, [sp, locals@1]
     movs r1, #3
     bl _numops_adds
     str r0, [sp, locals@1]
     @stackempty locals
-    b .fortop.932      
-.brk.932:
-    bl DightalTubes_FrameAck_1650__P900
-_proccall9:
+    b .fortop.789      
+.brk.789:
+    bl DightalTubes_FrameAck_1650__P764
+_proccall18:
     movs r1, #3
     bl _cmp_eq
     beq .else_2_5      
-.jmpz8:
+.jmpz17:
     movs r0, #3
     str r0, [sp, locals@2]
     @stackempty locals
@@ -1094,12 +595,12 @@ _proccall9:
     movs r0, #1
     str r0, [sp, locals@1]
     @stackempty locals
-.fortop.961:
+.fortop.818:
     ldr r0, [sp, locals@1]
     movs r1, #17
     bl _cmp_lt
-    beq .brk.961      
-.jmpz10:
+    beq .brk.818      
+.jmpz19:
     ldr r0, [sp, locals@0]
     movs r1, #1
     lsls r1, r1, #8
@@ -1110,7 +611,7 @@ _proccall9:
     bl numops::toBoolDecr
     cmp r0, #0
     beq .else_4_5      
-.jmpz11:
+.jmpz20:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1171,52 +672,52 @@ _proccall9:
     add sp, #4*1 ; pop locals 1
     str r0, [sp, locals@0]
     @stackempty locals
-.cont.961:
+.cont.818:
     ldr r0, [sp, locals@1]
     movs r1, #3
     bl _numops_adds
     str r0, [sp, locals@1]
     @stackempty locals
-    b .fortop.961      
-.brk.961:
-    bl DightalTubes_FrameAck_1650__P900
-_proccall13:
+    b .fortop.818      
+.brk.818:
+    bl DightalTubes_FrameAck_1650__P764
+_proccall22:
     movs r1, #3
     bl _cmp_eq
     beq .else_6_5      
-.jmpz12:
+.jmpz21:
     movs r0, #3
     str r0, [sp, locals@2]
     @stackempty locals
 .else_6_5:
 .afterif_7_5:
-    bl DightalTubes_FrameEnd_1650__P899
-_proccall14:
+    bl DightalTubes_FrameEnd_1650__P763
+_proccall23:
     @stackempty locals
     ldr r0, [sp, locals@2]
-.ret.901:
+.ret.765:
     @stackempty locals
 .final_8_5:
     add sp, #4*3 ; pop locals 3
-DightalTubes_writeByte__P901_end:
+DightalTubes_writeByte__P765_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function FrameEnd_1650 main.ts:104
+; Function FrameEnd_1650 main.ts:68
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_FrameEnd_1650__P899:
-DightalTubes_FrameEnd_1650__P899_nochk:
+DightalTubes_FrameEnd_1650__P763:
+DightalTubes_FrameEnd_1650__P763_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_FrameEnd_1650__P899_locals:
+DightalTubes_FrameEnd_1650__P763_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1247,29 +748,29 @@ DightalTubes_FrameEnd_1650__P899_locals:
     bl pins::digitalWritePin
     add sp, #4*1 ; pop locals 1
     @stackempty locals
-.ret.899:
+.ret.763:
     @stackempty locals
     movs r0, #0
 .final_0_6:
-DightalTubes_FrameEnd_1650__P899_end:
+DightalTubes_FrameEnd_1650__P763_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function FrameAck_1650 main.ts:112
+; Function FrameAck_1650 main.ts:76
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_FrameAck_1650__P900:
-DightalTubes_FrameAck_1650__P900_nochk:
+DightalTubes_FrameAck_1650__P764:
+DightalTubes_FrameAck_1650__P764_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_FrameAck_1650__P900_locals:
+DightalTubes_FrameAck_1650__P764_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1282,7 +783,7 @@ DightalTubes_FrameAck_1650__P900_locals:
     movs r1, #1
     bl _cmp_eq
     beq .else_0_7      
-.jmpz15:
+.jmpz24:
     ldr r7, [r6, #0]
     ldr r0, [r7, #48]
     push {r0} ; proc-arg
@@ -1304,35 +805,35 @@ DightalTubes_FrameAck_1650__P900_locals:
     add sp, #4*1 ; pop locals 1
     @stackempty locals
     movs r0, #1
-    b .ret.900      
+    b .ret.764      
     b .afterif_1_7      
 .else_0_7:
     movs r0, #3
-    b .ret.900      
+    b .ret.764      
 .afterif_1_7:
     movs r0, #0
-.ret.900:
+.ret.764:
     @stackempty locals
 .final_2_7:
-DightalTubes_FrameAck_1650__P900_end:
+DightalTubes_FrameAck_1650__P764_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function FrameStart_1650 main.ts:96
+; Function FrameStart_1650 main.ts:60
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_FrameStart_1650__P898:
-DightalTubes_FrameStart_1650__P898_nochk:
+DightalTubes_FrameStart_1650__P762:
+DightalTubes_FrameStart_1650__P762_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_FrameStart_1650__P898_locals:
+DightalTubes_FrameStart_1650__P762_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #44]
     push {r0} ; proc-arg
@@ -1363,40 +864,175 @@ DightalTubes_FrameStart_1650__P898_locals:
     bl pins::digitalWritePin
     add sp, #4*1 ; pop locals 1
     @stackempty locals
-.ret.898:
+.ret.762:
     @stackempty locals
     movs r0, #0
 .final_0_8:
-DightalTubes_FrameStart_1650__P898_end:
+DightalTubes_FrameStart_1650__P762_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function showNumber main.ts:269
+; Function showDpAt main.ts:236
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_showNumber__P686:
-DightalTubes_showNumber__P686_nochk:
+DightalTubes_showDpAt__P711:
+DightalTubes_showDpAt__P711_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_showNumber__P686_locals:
+DightalTubes_showDpAt__P711_locals:
+    ldr r0, [sp, args@1]
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::toBoolDecr
+    cmp r0, #0
+    beq .else_0_9      
+.jmpz25:
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    ldr r7, [r6, #0]
+    ldr r0, [r7, #52]
+    push {r0} ; proc-arg
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #9
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::mod
+    add sp, #4*1 ; pop locals 1
+    push {r0} ; proc-arg
+    ldr r0, [sp, #4*1] ; estack
+    ldr r1, [sp, #4*0] ; estack
+    bl _pxt_array_get
+    add sp, #4*2 ; pop locals 2
+    movs r1, #1
+    lsls r1, r1, #8
+    adds r1, #1
+    bl _numops_orrs
+    push {r0} ; proc-arg
+    pop {r1, r2}
+    push {r1}
+    push {r2}
+    bl DightalTubes_dat__P767
+_proccall26:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    b .afterif_1_9      
+.else_0_9:
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    ldr r7, [r6, #0]
+    ldr r0, [r7, #52]
+    push {r0} ; proc-arg
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #9
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::mod
+    add sp, #4*1 ; pop locals 1
+    push {r0} ; proc-arg
+    ldr r0, [sp, #4*1] ; estack
+    ldr r1, [sp, #4*0] ; estack
+    bl _pxt_array_get
+    add sp, #4*2 ; pop locals 2
+    movs r1, #255
+    bl _numops_ands
+    push {r0} ; proc-arg
+    pop {r1, r2}
+    push {r1}
+    push {r2}
+    bl DightalTubes_dat__P767
+_proccall27:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+.afterif_1_9:
+.ret.711:
+    @stackempty locals
+    movs r0, #0
+.final_2_9:
+DightalTubes_showDpAt__P711_end:
+    pop {pc}
+    @stackempty func
+    @stackempty args
+; endfun
+    ;
+; Function dat main.ts:144
+    ;
+    .section code
+    .balign 4
+    .section code
+DightalTubes_dat__P767:
+DightalTubes_dat__P767_nochk:
+    @stackmark func
+    @stackmark args
+    push {lr}
+.locals:
+    @stackmark locals
+DightalTubes_dat__P767_locals:
+    ldr r7, [r6, #0]
+    ldr r0, [r7, #16]
+    push {r0} ; proc-arg
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #9
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::mod
+    add sp, #4*1 ; pop locals 1
+    push {r0} ; proc-arg
+    ldr r0, [sp, #4*1] ; estack
+    ldr r1, [sp, #4*0] ; estack
+    bl _pxt_array_get
+    add sp, #4*2 ; pop locals 2
+    mov r3, r0
+    ldr r0, [sp, args@1]
+    push {r0} ; proc-arg
+    push {r3} ; the one arg
+    bl DightalTubes_writeByte__P765
+_proccall28:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+.ret.767:
+    @stackempty locals
+    movs r0, #0
+.final_0_10:
+DightalTubes_dat__P767_end:
+    pop {pc}
+    @stackempty func
+    @stackempty args
+; endfun
+    ;
+; Function showHex main.ts:217
+    ;
+    .section code
+    .balign 4
+    .section code
+DightalTubes_showHex__P707:
+DightalTubes_showHex__P707_nochk:
+    @stackmark func
+    @stackmark args
+    push {lr}
+.locals:
+    @stackmark locals
+DightalTubes_showHex__P707_locals:
     ldr r0, [sp, args@0]
     movs r1, #1
     bl _cmp_lt
-    beq .else_0_9      
-.jmpz16:
+    beq .else_0_11      
+.jmpz29:
     movs r0, #129
     push {r0} ; proc-arg
     movs r0, #1
     push {r0} ; proc-arg
-    bl DightalTubes_dat__P905
-_proccall17:
+    bl DightalTubes_dat__P767
+_proccall30:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
     movs r0, #1
@@ -1404,8 +1040,124 @@ _proccall17:
     bl _numops_subs
     str r0, [sp, args@0]
     @stackempty locals
-    b .afterif_1_9      
-.else_0_9:
+    b .afterif_1_11      
+.else_0_11:
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #25
+    bl _numops_asrs
+    add sp, #4*1 ; pop locals 1
+    push {r0} ; proc-arg
+    movs r1, #33
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::mod
+    add sp, #4*1 ; pop locals 1
+    mov r3, r0
+    movs r0, #1
+    push {r0} ; proc-arg
+    push {r3} ; the one arg
+    bl DightalTubes_digit__P695
+_proccall31:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+.afterif_1_11:
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #33
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::mod
+    add sp, #4*1 ; pop locals 1
+    mov r3, r0
+    movs r0, #7
+    push {r0} ; proc-arg
+    push {r3} ; the one arg
+    bl DightalTubes_digit__P695
+_proccall32:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #9
+    bl _numops_asrs
+    add sp, #4*1 ; pop locals 1
+    push {r0} ; proc-arg
+    movs r1, #33
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::mod
+    add sp, #4*1 ; pop locals 1
+    mov r3, r0
+    movs r0, #5
+    push {r0} ; proc-arg
+    push {r3} ; the one arg
+    bl DightalTubes_digit__P695
+_proccall33:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #17
+    bl _numops_asrs
+    add sp, #4*1 ; pop locals 1
+    push {r0} ; proc-arg
+    movs r1, #33
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::mod
+    add sp, #4*1 ; pop locals 1
+    mov r3, r0
+    movs r0, #3
+    push {r0} ; proc-arg
+    push {r3} ; the one arg
+    bl DightalTubes_digit__P695
+_proccall34:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+.ret.707:
+    @stackempty locals
+    movs r0, #0
+.final_2_11:
+DightalTubes_showHex__P707_end:
+    pop {pc}
+    @stackempty func
+    @stackempty args
+; endfun
+    ;
+; Function showNumber main.ts:199
+    ;
+    .section code
+    .balign 4
+    .section code
+DightalTubes_showNumber__P700:
+DightalTubes_showNumber__P700_nochk:
+    @stackmark func
+    @stackmark args
+    push {lr}
+.locals:
+    @stackmark locals
+DightalTubes_showNumber__P700_locals:
+    ldr r0, [sp, args@0]
+    movs r1, #1
+    bl _cmp_lt
+    beq .else_0_12      
+.jmpz35:
+    movs r0, #129
+    push {r0} ; proc-arg
+    movs r0, #1
+    push {r0} ; proc-arg
+    bl DightalTubes_dat__P767
+_proccall36:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    movs r0, #1
+    ldr r1, [sp, args@0]
+    bl _numops_subs
+    str r0, [sp, args@0]
+    @stackempty locals
+    b .afterif_1_12      
+.else_0_12:
     ldr r0, [sp, args@0]
     push {r0} ; proc-arg
     bl _conv_2
@@ -1426,11 +1178,11 @@ _proccall17:
     movs r0, #1
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P909
-_proccall18:
+    bl DightalTubes_digit__P695
+_proccall37:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
-.afterif_1_9:
+.afterif_1_12:
     ldr r0, [sp, args@0]
     push {r0} ; proc-arg
     movs r1, #21
@@ -1442,8 +1194,8 @@ _proccall18:
     movs r0, #7
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P909
-_proccall19:
+    bl DightalTubes_digit__P695
+_proccall38:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
     ldr r0, [sp, args@0]
@@ -1465,8 +1217,8 @@ _proccall19:
     movs r0, #5
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P909
-_proccall20:
+    bl DightalTubes_digit__P695
+_proccall39:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
     ldr r0, [sp, args@0]
@@ -1488,33 +1240,33 @@ _proccall20:
     movs r0, #3
     push {r0} ; proc-arg
     push {r3} ; the one arg
-    bl DightalTubes_digit__P909
-_proccall21:
+    bl DightalTubes_digit__P695
+_proccall40:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
-.ret.686:
+.ret.700:
     @stackempty locals
     movs r0, #0
-.final_2_9:
-DightalTubes_showNumber__P686_end:
+.final_2_12:
+DightalTubes_showNumber__P700_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function digit main.ts:258
+; Function digit main.ts:188
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_digit__P909:
-DightalTubes_digit__P909_nochk:
+DightalTubes_digit__P695:
+DightalTubes_digit__P695_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_digit__P909_locals:
+DightalTubes_digit__P695_locals:
     ldr r7, [r6, #0]
     ldr r0, [r7, #52]
     push {r0} ; proc-arg
@@ -1569,61 +1321,251 @@ DightalTubes_digit__P909_locals:
     pop {r1, r2}
     push {r1}
     push {r2}
-    bl DightalTubes_dat__P905
-_proccall22:
+    bl DightalTubes_dat__P767
+_proccall41:
     add sp, #4*2 ; pop locals 2
     @stackempty locals
-.ret.909:
+.ret.695:
     @stackempty locals
     movs r0, #0
-.final_0_10:
-DightalTubes_digit__P909_end:
+.final_0_13:
+DightalTubes_digit__P695_end:
     pop {pc}
     @stackempty func
     @stackempty args
 ; endfun
     ;
-; Function dat main.ts:213
+; Function clear main.ts:172
     ;
     .section code
     .balign 4
     .section code
-DightalTubes_dat__P905:
-DightalTubes_dat__P905_nochk:
+DightalTubes_clear__P693:
+DightalTubes_clear__P693_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-DightalTubes_dat__P905_locals:
-    ldr r7, [r6, #0]
-    ldr r0, [r7, #16]
+DightalTubes_clear__P693_locals:
+    movs r0, #1
     push {r0} ; proc-arg
+    movs r0, #1
+    push {r0} ; proc-arg
+    bl DightalTubes_dat__P767
+_proccall42:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    movs r0, #1
+    push {r0} ; proc-arg
+    movs r0, #3
+    push {r0} ; proc-arg
+    bl DightalTubes_dat__P767
+_proccall43:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    movs r0, #1
+    push {r0} ; proc-arg
+    movs r0, #5
+    push {r0} ; proc-arg
+    bl DightalTubes_dat__P767
+_proccall44:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    movs r0, #1
+    push {r0} ; proc-arg
+    movs r0, #7
+    push {r0} ; proc-arg
+    bl DightalTubes_dat__P767
+_proccall45:
+    add sp, #4*2 ; pop locals 2
+    @stackempty locals
+    mov r7, sp
+    str r7, [r6, #4]
+    bl Array_::mk
+    push {r0}; tmpstore @1
+    movs r1, #1
+    mov r7, sp
+    str r7, [r6, #4]
+    bl Array_::push
+    ldr r0, [sp, #4*0] ; tmpref @1
+    movs r1, #1
+    mov r7, sp
+    str r7, [r6, #4]
+    bl Array_::push
+    ldr r0, [sp, #4*0] ; tmpref @1
+    movs r1, #1
+    mov r7, sp
+    str r7, [r6, #4]
+    bl Array_::push
+    ldr r0, [sp, #4*0] ; tmpref @1
+    movs r1, #1
+    mov r7, sp
+    str r7, [r6, #4]
+    bl Array_::push
+    pop {r0} ; tmpref @1
+    ldr r7, [r6, #0]
+    str r0, [r7, #52]
+    @stackempty locals
+.ret.693:
+    @stackempty locals
+    movs r0, #0
+.final_0_14:
+DightalTubes_clear__P693_end:
+    pop {pc}
+    @stackempty func
+    @stackempty args
+; endfun
+    ;
+; Function setIntensity main.ts:247
+    ;
+    .section code
+    .balign 4
+    .section code
+DightalTubes_setIntensity__P691:
+DightalTubes_setIntensity__P691_nochk:
+    @stackmark func
+    @stackmark args
+    push {lr}
+.locals:
+    @stackmark locals
+DightalTubes_setIntensity__P691_locals:
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #1
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::lt
+    add sp, #4*1 ; pop locals 1
+    push {r0}; tmpstore @1
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::toBool
+    cmp r0, #0
+    beq .lazySkip_2_15      
+.jmpz46:
+    ldr r0, [sp, #4*0] ; tmpref @1
+    @dummystack 1
+    add sp, #4*1 ; pop locals 1
+    b .lazy_1_15      
+.lazySkip_2_15:
+    ldr r0, [sp, #0]      
+    ldr r0, [sp, #4*0] ; estack
+    add sp, #4*1 ; pop locals 1
+    ldr r0, [sp, args@0]
+    push {r0} ; proc-arg
+    movs r1, #17
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::gt
+    add sp, #4*1 ; pop locals 1
+.lazy_1_15:
+; jmp value (already in r0)
+    mov r7, sp
+    str r7, [r6, #4]
+    bl numops::toBoolDecr
+    cmp r0, #0
+    beq .else_0_15      
+.jmpz47:
+    b .ret.691      
+.else_0_15:
+.afterif_3_15:
+    ldr r0, [sp, args@0]
+    movs r1, #1
+    bl _cmp_eq
+    beq .else_4_15      
+.jmpz48:
+    bl DightalTubes_off__P769
+_proccall49:
+    @stackempty locals
+    b .afterif_5_15      
+.else_4_15:
+    ldr r0, [sp, args@0]
+    ldr r7, [r6, #0]
+    str r0, [r7, #36]
+    @stackempty locals
     ldr r0, [sp, args@0]
     push {r0} ; proc-arg
     movs r1, #9
-    mov r7, sp
-    str r7, [r6, #4]
-    bl numops::mod
+    bl _numops_lsls
     add sp, #4*1 ; pop locals 1
-    push {r0} ; proc-arg
-    ldr r0, [sp, #4*1] ; estack
-    ldr r1, [sp, #4*0] ; estack
-    bl _pxt_array_get
-    add sp, #4*2 ; pop locals 2
-    mov r3, r0
-    ldr r0, [sp, args@1]
-    push {r0} ; proc-arg
-    push {r3} ; the one arg
-    bl DightalTubes_writeByte__P901
-_proccall23:
-    add sp, #4*2 ; pop locals 2
+    movs r1, #3
+    bl _numops_orrs
+    push {r0} ; the one arg
+    bl DightalTubes_cmd__P766
+_proccall50:
+    add sp, #4*1 ; pop locals 1
     @stackempty locals
-.ret.905:
+.afterif_5_15:
+.ret.691:
     @stackempty locals
     movs r0, #0
-.final_0_11:
-DightalTubes_dat__P905_end:
+.final_6_15:
+DightalTubes_setIntensity__P691_end:
+    pop {pc}
+    @stackempty func
+    @stackempty args
+; endfun
+    ;
+; Function off main.ts:162
+    ;
+    .section code
+    .balign 4
+    .section code
+DightalTubes_off__P769:
+DightalTubes_off__P769_nochk:
+    @stackmark func
+    @stackmark args
+    push {lr}
+.locals:
+    @stackmark locals
+DightalTubes_off__P769_locals:
+    movs r0, #1
+    ldr r7, [r6, #0]
+    str r0, [r7, #36]
+    @stackempty locals
+    movs r0, #1
+    push {r0} ; proc-arg
+    bl DightalTubes_cmd__P766
+_proccall51:
+    add sp, #4*1 ; pop locals 1
+    @stackempty locals
+.ret.769:
+    @stackempty locals
+    movs r0, #0
+.final_0_16:
+DightalTubes_off__P769_end:
+    pop {pc}
+    @stackempty func
+    @stackempty args
+; endfun
+    ;
+; Function connectPIN main.ts:52
+    ;
+    .section code
+    .balign 4
+    .section code
+DightalTubes_connectPIN__P682:
+DightalTubes_connectPIN__P682_nochk:
+    @stackmark func
+    @stackmark args
+    push {lr}
+.locals:
+    @stackmark locals
+DightalTubes_connectPIN__P682_locals:
+    ldr r0, [sp, args@0]
+    ldr r7, [r6, #0]
+    str r0, [r7, #48]
+    @stackempty locals
+    ldr r0, [sp, args@1]
+    ldr r7, [r6, #0]
+    str r0, [r7, #44]
+    @stackempty locals
+.ret.682:
+    @stackempty locals
+    movs r0, #0
+.final_0_17:
+DightalTubes_connectPIN__P682_end:
     pop {pc}
     @stackempty func
     @stackempty args
@@ -2736,14 +2678,14 @@ _helpers_end:
 .balign 4
 _pxt_iface_member_names:
     .word 1
-    .word _str24  ; 0 .
+    .word _str52  ; 0 .
     .word 0
 _vtables_end:
 .balign 4
 _pxt_config_data:
     .word 0
 .balign 4
-_str24:
+_str52:
  .word pxt::string_inline_ascii_vt
         .short 0
         .string ""
