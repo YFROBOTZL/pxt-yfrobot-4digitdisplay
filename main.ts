@@ -10,8 +10,8 @@
  * @date  2021-04-17
 */
 
-//% weight=10 color=#64C800 icon="\uf12e" block="DightalTubes"
-namespace DightalTubes {
+//% weight=10 color=#64C800 icon="\uf12e" block="DigitalTubes"
+namespace DigitalTubes {
     
     let PINCLK = DigitalPin.P1;
     let PINDIO = DigitalPin.P2;
@@ -32,7 +32,7 @@ namespace DightalTubes {
      * @param pin_c CLK pin. eg: DigitalPin.P1
      * @param pin_d DIO pin. eg: DigitalPin.P2
      */
-    //% blockId="yfrobot_4dightaltubes_pins"
+    //% blockId="yfrobot_4digitaltubes_pins"
     //% block="connect 4 digital tubes at CLK %pin_c and DIO %pin_d"
     //% pin_c.fieldEditor="gridpicker" pin_c.fieldOptions.columns=4 pin_c.fieldOptions.tooltips="false"
     //% pin_d.fieldEditor="gridpicker" pin_d.fieldOptions.columns=4 pin_d.fieldOptions.tooltips="false"
