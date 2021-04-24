@@ -49,7 +49,7 @@ set display intensity.
 
 ## Demo
 
-![](https://raw.githubusercontent.com/finalvalue/pxt-yfrobot-4digitdisplay/main/demo.jpg)
+![](https://raw.githubusercontent.com/finalvalue/pxt-yfrobot-4digitdisplay/main/demo.png)
 
 ## License  
 MIT

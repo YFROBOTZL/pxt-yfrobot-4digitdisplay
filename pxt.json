@@ -1,6 +1,6 @@
 {
     "name": "DightalTubes",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "YFROBOT's Four Digit Display makecode Package for micro:bit",
     "license": "MIT",
     "dependencies": {
