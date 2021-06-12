@@ -1,0 +1,20 @@
+{
+  "DigitalTubes.clear": "清除顯示內容。",
+  "DigitalTubes.connectPIN": "連接數字管模塊到指定引腳。",
+  "DigitalTubes.connectPIN|param|pin_c": "CLK引腳. 例如: DigitalPin.P1",
+  "DigitalTubes.connectPIN|param|pin_d": "DIO引腳. 例如: DigitalPin.P2",
+  "DigitalTubes.digit": "在給定位置顯示數字",
+  "DigitalTubes.digit|param|bit": "位置, 例如: 0",
+  "DigitalTubes.digit|param|num": "將顯示的數字(0-15), 例如: 1",
+  "DigitalTubes.off": "關閉顯示",
+  "DigitalTubes.on": "打開顯示",
+  "DigitalTubes.setIntensity": "設置顯示亮度",
+  "DigitalTubes.setIntensity|param|dat": "顯示的亮度, eg: 3",
+  "DigitalTubes.showDpAt": "在給定位置顯示點",
+  "DigitalTubes.showDpAt|param|bit": "位置, 例如: 0",
+  "DigitalTubes.showDpAt|param|show": "true或false, 例如: true",
+  "DigitalTubes.showHex": "顯示十六進制格式的數字",
+  "DigitalTubes.showHex|param|num": "將顯示的數字, 例如: 123",
+  "DigitalTubes.showNumber": "顯示一個數字",
+  "DigitalTubes.showNumber|param|num": "將顯示的數字, 例如: 100"
+}

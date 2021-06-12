@@ -1,6 +1,6 @@
 {
     "name": "DigitalTubes",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "YFROBOT's Four Digit Display makecode Package for micro:bit",
     "license": "MIT",
     "dependencies": {

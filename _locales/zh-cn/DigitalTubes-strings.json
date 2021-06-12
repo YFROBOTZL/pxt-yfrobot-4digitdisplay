@@ -1,0 +1,13 @@
+{
+  "DigitalTubes.clear|block": "清除显示",
+  "DigitalTubes.connectPIN|block": "连接数码管引脚CLK到%pin_c和引脚DIO到%pin_d",
+  "DigitalTubes.digit|block": "显示数字%num|在第%bit位",
+  "DigitalTubes.off|block": "关闭显示",
+  "DigitalTubes.on|block": "打开显示",
+  "DigitalTubes.setIntensity|block": "设置显示亮度：%dat",
+  "DigitalTubes.showDpAt|block": "设置第%bit位点显示%num",
+  "DigitalTubes.showHex|block": "显示16进制数字：%num",
+  "DigitalTubes.showNumber|block": "显示数字：%num",
+  "DigitalTubes|block": "DigitalTubes",
+  "{id:category}DigitalTubes": "DigitalTubes"
+}
