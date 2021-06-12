@@ -9,7 +9,12 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "_locales/zh-cn/DigitalTubes-strings.json",
+        "_locales/zh-cn/DigitalTubes-jsdoc-strings.json",
+        "_locales/zh-tw/DigitalTubes-strings.json",
+        "_locales/zh-tw/DigitalTubes-jsdoc-strings.json"
+
     ],
     "testFiles": [
         "test.ts"
