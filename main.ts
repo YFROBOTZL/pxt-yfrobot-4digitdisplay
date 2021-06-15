@@ -173,6 +173,7 @@ namespace DigitalTubes {
     //% blockId="TM650_DIGIT" block="show digit %num|at %bit"
     //% weight=80 blockGap=8
     //% num.max=15 num.min=0
+    //% bit.max=3 bit.min=0
     export function digit(num: number, bit: number) {
         dbuf[bit % 4] = _SEG[num % 16]
         dat(bit, _SEG[num % 16])
@@ -219,8 +220,9 @@ namespace DigitalTubes {
      * @param bit is positiion, eg: 0
      * @param show is true/false, eg: true
      */
-    //% blockId="TM650_SHOW_DP" block="at%bit|show dot point %show"
+    //% blockId="TM650_SHOW_DP" block="at %bit|show dot point %show"
     //% weight=80 blockGap=8
+    //% bit.max=3 bit.min=0
     export function showDpAt(bit: number, show: boolean) {
         if (show) dat(bit, dbuf[bit % 4] | 0x80)
         else dat(bit, dbuf[bit % 4] & 0x7F)
