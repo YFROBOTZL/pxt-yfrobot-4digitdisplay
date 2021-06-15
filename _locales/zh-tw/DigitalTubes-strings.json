@@ -1,13 +1,13 @@
 {
   "DigitalTubes.clear|block": "清除顯示",
-  "DigitalTubes.connectPIN|block": "連接數碼管引腳CLK到%pin_c和引腳DIO到%pin_d",
-  "DigitalTubes.digit|block": "顯示數字%num|在第%bit位",
+  "DigitalTubes.connectPIN|block": "數碼管CLK%pin_c和DIO%pin_d",
+  "DigitalTubes.digit|block": "在第%bit位顯示數字%num",
   "DigitalTubes.off|block": "關閉顯示",
   "DigitalTubes.on|block": "打開顯示",
-  "DigitalTubes.setIntensity|block": "設置顯示亮度：%dat",
-  "DigitalTubes.showDpAt|block": "設置第%bit位點顯示%num",
-  "DigitalTubes.showHex|block": "顯示16進制數字：%num",
-  "DigitalTubes.showNumber|block": "顯示數字：%num",
+  "DigitalTubes.setIntensity|block": "設置顯示亮度%dat",
+  "DigitalTubes.showDpAt|block": "設置第%bit位點顯示%show",
+  "DigitalTubes.showHex|block": "顯示16進制數字%num",
+  "DigitalTubes.showNumber|block": "顯示數字%num",
   "DigitalTubes|block": "DigitalTubes",
-  "{id:category}DigitalTubes": "DigitalTubes"
+  "{id:category}DigitalTubes": "數碼管顯示"
 }

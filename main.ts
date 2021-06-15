@@ -219,7 +219,7 @@ namespace DigitalTubes {
      * @param bit is positiion, eg: 0
      * @param show is true/false, eg: true
      */
-    //% blockId="TM650_SHOW_DP" block="show dot point %bit|show %num"
+    //% blockId="TM650_SHOW_DP" block="at%bit|show dot point %show"
     //% weight=80 blockGap=8
     export function showDpAt(bit: number, show: boolean) {
         if (show) dat(bit, dbuf[bit % 4] | 0x80)
