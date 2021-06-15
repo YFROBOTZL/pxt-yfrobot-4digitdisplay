@@ -171,7 +171,7 @@ namespace DigitalTubes {
      * @param bit is position, eg: 0
      */
     //% blockId="TM650_DIGIT" block="show digit %num|at %bit"
-    //% weight=80 blockGap=8
+    //% weight=85 blockGap=8
     //% num.max=15 num.min=0
     //% bit.max=3 bit.min=0
     export function digit(num: number, bit: number) {
